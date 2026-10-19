@@ -1,6 +1,6 @@
 {
   "name": "dsh-system-monitor",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "System monitor plugin for the DeepSeek Harness web GUI: a right-sidebar \"System\" panel with live CPU (per-core + frequency), memory/swap, GPU (utilization, VRAM, temperature, power, processes) and temperature/fan/power telemetry.",
   "type": "module",
   "main": "lib/index.js",
