@@ -61,5 +61,8 @@
     "htop",
     "gpu",
     "web-ui"
-  ]
+  ],
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  }
 }

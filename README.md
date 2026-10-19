@@ -100,6 +100,17 @@ dsh plugin --profile web remove dsh-system-monitor
 - 唯一的路由监听在 `127.0.0.1`，跟随 dsh 的 Web 服务，不经公网。
 - 进程信息只在本地渲染，不写入日志。
 
+## 开发
+
+仓库没有构建步骤：`lib/client.js` 本身就是可被 `window.__ModuleLoader__` 加载的 bundle，改完直接跑：
+
+```bash
+node --check lib/index.js && node --check lib/client.js
+npm test          # 用 stub ModuleLoader + stub react 跑一遍注册与导出
+```
+
+GitHub Actions 在 push / PR 时执行同样的检查（`.github/workflows/check.yml`）。
+
 ## License
 
 [MIT](LICENSE)
